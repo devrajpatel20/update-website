@@ -96,3 +96,67 @@
     
 })(jQuery);
 
+// let imageSources = [
+//     'img/mdimg_11zon.jpg',
+//     'img/princapil_11zon.jpg',
+//     'img/collagelaeebreri.jpg',
+//     'img/collagebanir.jpg',
+//     'img/labpic_11zon.jpg',
+//     'img/shreeimg_11zon.jpg',
+//     'img/lad2_11zon.jpg',
+//     'img/classroomphoto_11zon.jpg'
+//   ];
+
+//   // Function to create image elements and add them to the gallery
+//   function populateGallery() {
+//     let gallery = document.querySelector('.container');
+    
+//     imageSources.forEach(src => {
+//       let imgDiv = document.createElement('div');
+//       imgDiv.classList.add('col-lg-3', 'col-md-4', 'col-6');
+      
+//       let img = document.createElement('img');
+//       img.classList.add('img-fluid', 'img-thumbnail');
+//       img.src = src;
+//       img.alt = 'Image';
+//       img.onclick = function() {
+//         openModal(src);
+//       };
+      
+//       imgDiv.appendChild(img);
+//       gallery.appendChild(imgDiv);
+//     });
+//   }
+
+//   // Call the function to populate the gallery with images
+//   populateGallery();
+
+//   // Open modal with clicked image
+//   function openModal(src) {
+// let modal = document.getElementById("myModal");
+// let modalImg = document.getElementById("modalImg");
+// let currentIndex = imageSources.indexOf(src);
+
+// modalImg.src = src;
+// modal.style.display = "block";
+
+// // Close modal when close button is clicked
+// let closeBtn = document.querySelector('.close');
+// closeBtn.onclick = function () {
+// modal.style.display = "none";
+// };
+
+// // Navigate images using arrow icons
+// let leftArrow = document.querySelector('.left-arrow');
+// let rightArrow = document.querySelector('.right-arrow');
+
+// leftArrow.onclick = function () {
+// currentIndex = (currentIndex - 1 + imageSources.length) % imageSources.length;
+// modalImg.src = imageSources[currentIndex];
+// };
+
+// rightArrow.onclick = function () {
+// currentIndex = (currentIndex + 1) % imageSources.length;
+// modalImg.src = imageSources[currentIndex];
+// };
+// }
