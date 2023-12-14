@@ -16,6 +16,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap">
 
 
+    <link rel="stylesheet" href="@@path/vendor/@fancyapps/fancybox/dist/jquery.fancybox.min.css">
+    <script src="@@path/vendor/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
+
     <!-- Icon Font Stylesheet -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
@@ -37,9 +40,29 @@
     <link href="css/style.css" rel="stylesheet" />
   </head>
 
+  <script>
+       
+    // function to show image when we click on a image
+function showImage(imageSrc) {
+let popupImage = document.getElementById("popupImage");
+popupImage.src = imageSrc;
+
+let imagePopup = document.getElementById("imagePopup");
+imagePopup.style.display = "block";
+document.body.style.overflow = "hidden";
+}
+// function to hide the image when we click on cross button
+function closeImage() {
+let imagePopup = document.getElementById("imagePopup");
+imagePopup.style.display = "none";
+document.body.style.overflow = "auto";
+}
+
+ </script>
+
   <body>
 
-    <div class="p-1 text-center header sticky-top">
+    <div class="p-1 text-center header">
       <h3 class="mb-0" style="font-family: 'Courier New', Courier, monospace">
         संस्था: संत श्री किशनाराम महाविद्यालय
       </h3>
@@ -59,7 +82,7 @@
 
     <!-- Navbar Start -->
     <div
-    class="container-fluid p-0 m-0 sticky-top"
+    class="container-fluid p-0 m-0"
     style="background-color: cadetblue"
   >
     <div class="container">
@@ -69,13 +92,16 @@
       >
         <a href="index.html" class="navbar-brand">
           <img
-            class="img-fluid mx-2"
+            class="img-fluid mt-2 m-5"
             src="img/kisnaram.jpg"
             style="border-radius: 10%"
             width="50px"
             alt="Logo"
+            
           />
         </a>
+
+
         <button
           type="button"
           class="navbar-toggler ms-auto me-0"
@@ -86,10 +112,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <div class="navbar-nav ms-auto">
-            <a href="index.html" class="nav-item nav-link active">Home</a>
+            <a href="index.html" class="nav-item nav-link">Home</a>
             <a href="contact.html" class="nav-item nav-link">Contact</a>
             <a href="Subject.html" class="nav-item nav-link">Subject</a>
-            <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+            <a href="gallery.html" class="nav-item nav-link active">Gallery</a>
             <a href="blog.html" class="nav-item nav-link">Blog</a>
           </div>
         </div>
@@ -101,41 +127,55 @@
 
     <div class="container">
 
-        <h1 class=" text-center mt-4 mb-0">Collage Gallery</h1>
+        <h1 class=" text-center mt-1 mb-0">Collage Gallery</h1>
       
         <hr class="mt-2 mb-5">
-      
-        <div class="row text-center text-lg-start">
-          <div class="col-lg-3 col-md-4 col-6">
 
-              <img class="img-fluid img-thumbnail" src="img/mdimg_11zon.jpg" alt="md image" onclick="myFunction(this)">
-          </div>
-          <div class="col-lg-3 col-md-4 col-6">
-              <img class="img-fluid img-thumbnail" src="img/princapil_11zon.jpg" alt="princapil_11zon" onclick="myFunction(this)">
-          </div>
-          <div class="col-lg-3 col-md-4 col-6">
-              <img class="img-fluid img-thumbnail" src="img/collagelaeebreri.jpg" alt="collagelaeebreri" onclick="myFunction(this)">
-          </div>
-          <div class="col-lg-3 col-md-4 col-6">
-              <img class="img-fluid img-thumbnail" src="img/collagebanir.jpg" alt="collagebanir" onclick="myFunction(this)">
-          </div>
-          <div class="col-lg-3 col-md-4 col-6">
-              <img class="img-fluid img-thumbnail" src="img/labpic_11zon.jpg" alt="labpic_11zon" onclick="myFunction(this)">
-          </div>
-          <div class="col-lg-3 col-md-4 col-6">
-              <img class="img-fluid img-thumbnail" src="img/shreeimg_11zon.jpg" alt="shreeimg_11zon" onclick="myFunction(this)">           
-          </div>
-          <div class="col-lg-3 col-md-4 col-6">
-              <img class="img-fluid img-thumbnail" src="img/lad2_11zon.jpg" alt="lab img" onclick="myFunction(this)">
-          </div>
-          <div class="col-lg-3 col-md-4 col-6">
-              <img class="img-fluid img-thumbnail" src="img/classroomphoto_11zon.jpg" 
-                alt="classroom photo" onclick="myFunction(this);">
-          </div>
-        </div>
-      </div>    
+
+<!-- Heading Name -->
+<div class="heading">
+	<h1>Image Gallery</h1>
+</div>
+	<!-- Image Gallery section all image in one div -->
+	<div class="gallery">
+<img src="img/lad2_11zon.jpg"alt="Image 3" class="gallery-img" onclick="showImage(src)">
+
+<img src="img/collagelaeebreri.jpg" alt="Image 4" class="gallery-img rounded" onclick="showImage(src)">
+
+<img src="img/princapil_11zon.jpg" alt="Image 5" class="gallery-img" onclick="showImage(src)">
+
+<img src="img/labpic_11zon.jpg" alt="Image 6" class="gallery-img" onclick="showImage(src)">
+
+<img src="img/shreeimg_11zon.jpg" alt="Image 7" class="gallery-img" onclick="showImage(src)">
+
+<img src="img/shreeimg_11zon.jpg" alt="Image 8" class="gallery-img" onclick="showImage(src)">
+
+<img src="img/schoolbus_11zon.jpg"alt="Image 9" class="gallery-img" onclick="showImage(src)">
+		
+<img src="img/classroomphoto_11zon.jpg" alt="Image 7" class="gallery-img" onclick="showImage(src)">
+
+<img src="img/water.jpg" alt="Image 8" class="gallery-img" onclick="showImage(src)">
+
+<img src="img/partyphoto.jpeg.jpg"alt="Image 9" class="gallery-img" onclick="showImage(src)">
+
+<img src="img/collage2.jpg" alt="Image 10" class="gallery-img" onclick="showImage(src)">	
+
+<img src="img/collageground.jpg" alt="Image 10" class="gallery-img" onclick="showImage(src)">	
+</div>
+
+<!-- Image containter where image will show in big size -->
+	<div class="image-popup-container" id="imagePopup">
+		<span class="close-button" onclick="closeImage()">×</span>
+		<img src="" alt="Popup Image" id="popupImage">
+	</div>
+	<script src="script.js"></script>
+
+  
+      </div>   
       
-    
+   
+
+
    <!-- Footer Start -->
    <div
    class="container-fluid bg-dark footer mt-2 py-2 wow fadeIn"
@@ -153,7 +193,7 @@
          </p>
          <p class="mb-2">
            <i class="fa fa-phone-alt text-primary me-3"></i
-           ><a href="Tel:+91-9568458866">+91-9568458866</a>
+           ><a href="Tel:+91-9568458866">+91-7568458866</a>
          </p>
          <p class="mb-2">
            <i class="fa fa-envelope text-primary me-3"></i
