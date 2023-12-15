@@ -149,7 +149,7 @@
                   />
                   <div class="overlay-text bg-dark text-light p-4  text-center position-absolute top-50 start-50 translate-middle" style="opacity: 0.7; border-radius: 30px; max-height: 80%;">
                     <h4 class="image-content" style="color: white;"><i>WELCOME</i></h4>
-                    <h5 style="color: white;" class="image-content-name">Sant Shree Kisnaram College Sanchore</h5>
+                    <h5 style="color: white;" class="image-content-name">Sant Shree Kishnaram College Sanchore</h5>
                     <button type="button"  class="btn btn-outline-success image-content-link"><a href="read.html" class="image-content-link" style="color: white;">Read-More</a></button>
                   </div>
                 </div>
@@ -254,7 +254,7 @@
             <img
               src="img/collagelaeebreri.jpg"
               height=""
-              alt="laeederi photo"
+              alt="collagelaeebreri"
               class="rounded"
             />
             <div
@@ -294,7 +294,7 @@
             <div
               class="bg-white shadow-sm text-center p-4 position-relative mt-n5 mx-4"
             >
-              <h4 class="text-danger">School Bus</h4>
+              <h4 class="text-danger">College Bus</h4>
               <span class="text-body hindi"
                 >Organized bus facility is available for the student to come to
                 the college
@@ -362,57 +362,92 @@
           <h3 class="display-7">Higher Education and Training</h3>
         </div>
         <div class="row g-4">
-          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
             <div class="store-item position-relative text-center">
-              <a href="img/banner2.png.jpg" target="_blank">
                 <img
-                  class="img-fluid rounded"
-                  src="img/banner2.png.jpg"
+                  class="img-fluid rounded" onclick="showImage(src)"
+                  src="img/collegeform.jpeg"
                   alt=""
-                  width="70%"
+                  width="65%"
                 />
-              </a>
+            
               <div class="p-1">
-                <h4 class="mb-3">
-                  Sant Shree Rajaram Bhavishya gyan Jyoti Foundation
+                <a href="img/college-forme.pdf" download="college-forme.pdf">
+                  <button class="btn btn py-0 px-1" style="font-size: 15px; color: red;" >Download</button>
+              </a>
+                <h4 class="mb-1" style="font-size: 19px;">
+                  College form
                 </h4>
                 <p></p>
               </div>
             </div>
           </div>
+         
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+            <div class="store-item position-relative text-center">
+                <img
+                  class="img-fluid rounded" onclick="showImage(src)"
+                  src="img/Affiliation-Section-letter.jpeg"
+                  alt="Affiliation-Section-letter"
+                  width="70%"
+                />
+              <div class="p-1">
+                <a href="img/Affiliation-Section-letter.jpeg" download="Affiliation-Section-letter.jpeg">
+                  <button class="btn btn- py-1 px-2" style="font-size: 15px; color: red;" >Download</button>
+              </a>
+                <h4 class="mb-3" style="font-size: 19px;">Affiliation Section letter</h4>
+                <p></p>
+              </div>
+            </div>
+          </div>
 
-          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
             <div class="store-item position-relative text-center">
-              <a href="img/templatcollage.jpg" target="_blank">
                 <img
-                  class="img-fluid rounded"
-                  src="img/templatcollage.jpg"
-                  alt=" collage tamplate"
-                  width="70%"
+                  class="img-fluid rounded" onclick="showImage(src)"
+                  src="img/Order-letter.jpeg"
+                  alt="order-letter"
+                  width="60%"
                 />
-              </a>
               <div class="p-1">
-                <h4 class="mb-3">Specialty of the college</h4>
+                <a href="img/Order-letter.jpeg" download="Order-letter.jpeg">
+                  <button class="btn btn- rounded-pill py-1 px-2" style="font-size: 15px; color: red;" >Download</button>
+              </a>
+                <h4 class="mb-3" style="font-size: 19px;">Order letter</h4>
                 <p></p>
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+          
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
             <div class="store-item position-relative text-center">
-              <a href="img/exgamform.jpg" target="_blank">
                 <img
-                  class="img-fluid rounded"
+                  class="img-fluid rounded" onclick="showImage(src)"
                   src="img/exgamform.jpg"
-                  alt="exgam form"
+                  alt="order-letter"
                   width="70%"
                 />
-              </a>
               <div class="p-1">
-                <h4 class="mb-3">Exam form</h4>
+                <a href="img/exgamform.jpg" download="exgamform.jpg">
+                  <button class="btn btn- rounded-pill py-1 px-2" style="font-size: 15px; color: red;" >Download</button>
+              </a>
+                <h4 class="mb-3" style="font-size: 19px;">Bhavishya Gyan jyoti Foundation Application Form</h4>
                 <p></p>
               </div>
             </div>
           </div>
+      
+          <div class="image-popup-container" id="imagePopup">
+            <span class="close-button" onclick="closeImage()">×</span>
+            <img src="" alt="Popup Image" id="popupImage">
+          </div>
+
+
+
+
+
+
+
           <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.2s">
             <a href="read.html" class="btn btn-primary rounded-pill py-2 px-3"
               >View More Details</a
@@ -531,6 +566,25 @@
       </div>
     </div>
     <!-- Contact Start -->
+    <script>
+       
+      // function to show image when we click on a image
+  function showImage(imageSrc) {
+  let popupImage = document.getElementById("popupImage");
+  popupImage.src = imageSrc;
+  
+  let imagePopup = document.getElementById("imagePopup");
+  imagePopup.style.display = "block";
+  document.body.style.overflow = "hidden";
+  }
+  // function to hide the image when we click on cross button
+  function closeImage() {
+  let imagePopup = document.getElementById("imagePopup");
+  imagePopup.style.display = "none";
+  document.body.style.overflow = "auto";
+  }
+  
+   </script>
 
     <!-- Footer Start -->
     <div
